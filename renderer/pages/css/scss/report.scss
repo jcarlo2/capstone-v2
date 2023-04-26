@@ -1,0 +1,245 @@
+.generate-container {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  > div {
+    &.left {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      gap: 10px;
+      > div {
+        border-radius: 10px;
+        border: black 1px solid;
+        background: linear-gradient(45deg,#2690c7, #327065);
+        &:first-child {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          input {
+            height: 30px;
+            border: 0;
+            outline: 0;
+            border-radius: 4px;
+            padding: 10px;
+            width: 200px;
+            &[type=button] {
+              padding: 0;
+              width: 100px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(#5a5ee1, #3f44c4);
+              color: #ecdede;
+              &:hover {
+                color: #181717;
+              }
+            }
+          }
+          & > .year-picker {
+            position: relative;
+            display: flex;
+            padding: 3px;
+            > input[type=text] {
+              text-align: center;
+              font-weight: bold;
+              cursor: pointer;
+            }
+            .dropdown-list {
+              z-index: 100;
+              display: none;
+              position: absolute;
+              top: 100%;
+              background: buttonface;
+              width: 200px;
+              flex-direction: column;
+              align-items: center;
+              gap: 3px;
+              height: 200px;
+              border-bottom-left-radius: 6px;
+              border-bottom-right-radius: 6px;
+              overflow: auto;
+              > li {
+                display: flex;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 20px;
+                cursor: pointer;
+                width: 100%;
+                &:hover {
+                  background: #0c6070;
+                }
+              }
+
+              &.active {
+                display: flex;
+              }
+            }
+          }
+          & > .dropdown {
+            > input[type=button] {
+              width: 150px;
+              background: buttonface;
+              color: #000;
+              font-weight: bold;
+              &:hover {
+                background: #d2c3c3;
+              }
+            }
+          }
+        }
+        &:nth-child(2) {
+          flex: 8;
+          display: flex;
+          flex-direction: column;
+          > div:first-child {
+            flex: 1;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            > input {
+              height: 40px;
+              width: 130px;
+              font-size: 14px;
+              border-radius: 4px;
+              &:first-child {
+                background: #4ce5c9;
+              }
+              &:nth-child(2) {
+                background: #cccc44;
+              }
+              &:nth-child(3) {
+                background: #6868af;
+              }
+            }
+          }
+          > div:nth-child(2) {
+            flex: 8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            > div:first-child {
+              flex: 1;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              > h1 {
+                font-size: 48px;
+                border: 3px #dcc9c9 solid;
+                padding: 10px;
+                border-radius: 4px;
+                width: 350px;
+                text-align: center;
+              }
+            }
+            > div:nth-child(2){
+              flex: 5;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 30px;
+              > div {
+                height: 40px;
+                display: flex;
+                > h3 {
+                  height: 100%;
+                  width: 150px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-top-left-radius: 4px;
+                  border-bottom-left-radius: 4px;
+                  &.sales {
+                    background: #4ce5c9;
+                  }
+                  &.loss {
+                    background: #cccc44;
+                  }
+                  &.goods {
+                    background: #6868af;
+                  }
+                }
+
+                > input {
+                  border: 0;
+                  outline: none;
+                  padding: 10px;
+                  width: 200px;
+                  border-radius: 0 4px 4px 0;
+                }
+              }
+            }
+          }
+          > div:nth-child(3) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > input {
+              height: 30px;
+              width: 150px;
+              border-radius: 4px;
+              background: #44c590;
+            }
+          }
+        }
+      }
+    }
+    &.right {
+      border: black 1px solid;
+      border-radius: 10px;
+      flex: 5;
+      overflow-y: auto;
+      & > .sales-report-table {
+        > thead > tr > th, > tbody > tr > td {
+          &:nth-child(1) {
+            flex: 7;
+          }
+          &:nth-child(2) {
+            flex: 9;
+          }
+          &:nth-child(3) {
+            flex: 3;
+          }
+          &:nth-child(4) {
+            flex: 3;
+          }
+          &:nth-child(5) {
+            flex: 2;
+          }
+          &:nth-child(6) {
+            flex: 4;
+          }
+        }
+      }
+      & > .loss-report-table, & > .goods-report-table {
+        > thead > tr > th, > tbody > tr > td {
+          &:nth-child(1) {
+            flex: 6;
+          }
+          &:nth-child(2) {
+            flex: 7;
+          }
+          &:nth-child(3) {
+            flex: 4;
+          }
+          &:nth-child(4) {
+            flex: 3;
+          }
+        }
+      }
+    }
+  }
+}

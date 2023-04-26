@@ -1,0 +1,112 @@
+nav {
+  height: 100px;
+  display: none;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom,var(--lightgreen),var(--darkgreen));
+  border-bottom: 1px var(--border) solid;
+  > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    > div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: relative;
+      height: 30px;
+      width: 40px;
+      > span {
+        width: 35px;
+        height: 5px;
+        background: linear-gradient(#1bd2d2, #0c6070);
+        border-radius: 5px;
+        display: inline-block;
+        box-shadow: 1px 2px rgba(0,0,0,0.7);
+        transition: 0.4s linear;
+        position: absolute;
+
+        &:nth-child(2) {
+          top: 10px;
+        }
+
+        &:nth-child(3) {
+          top: 20px;
+        }
+      }
+      &:hover > span:nth-child(2) {
+        transform: translateX(5px);
+        background: #a7d218;
+      }
+      &.active {
+        top: unset;
+        > span {
+          box-shadow: none;
+          background: linear-gradient(#325c88, #36579d);
+          transition: 0.3s linear;
+          top: unset;
+          margin-top: 10px;
+        }
+        > span:nth-child(1) {
+          transform: rotate(45deg);
+        }
+
+        > span:nth-child(2) {
+          transform: scaleY(0);
+        }
+
+        > span:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    > div:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 400px;
+      height: 300px;
+      position: absolute;
+      background: linear-gradient(#679b4a, #3caf55);
+      top: calc(100% + 10px);
+      left: -20px;
+      border-bottom-right-radius: 5px;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      transition: 0.5s ease-in;
+      z-index: 10;
+      &.active {
+        left: -400%;
+      }
+      > h1 {
+        cursor: pointer;
+        transition: 0.2s linear;
+        &:hover {
+          color: #e5d5d5;
+        }
+      }
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  > h1 {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 30px;
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
+  }
+}

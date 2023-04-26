@@ -1,0 +1,101 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#94b776, #355b45);
+  > :first-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    padding: 5px 20px 5px 5px;
+    > img {
+      height: 100%;
+      animation: rotate360 10s linear infinite;
+      cursor: pointer;
+      &:hover {
+        mix-blend-mode: lighten;
+      }
+    }
+  }
+  > :nth-child(2) {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    > img {
+      height: 100%;
+    }
+    > h1 {
+      font-size: 48px;
+      background: -webkit-linear-gradient(#1e2025, rgb(26, 40, 40));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  > :nth-child(3) {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    height: 200px;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      > button {
+        height: 100%;
+        width: 200px;
+        border-radius: 6px;
+        font-size: 20px;
+        background: linear-gradient(235deg, #72a1e5, rgb(41, 129, 155));
+        box-shadow: none;
+      }
+
+      h2 {
+        color: #b0a9a9;
+        transition: 0.3s linear;
+      }
+
+      &:hover > button {
+        scale: 0.9;
+      }
+
+      &:hover > h2 {
+        scale: 1.1;
+        color: white;
+      }
+    }
+    > div:nth-child(1) {
+      > button {
+        background: url('/images/transaction.svg') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    > div:nth-child(2) {
+      > button {
+        background: url('/images/inventory.svg') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    > div:nth-child(3) {
+      > button {
+        background: url('/images/report.svg') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    > div:nth-child(4) {
+      > button {
+        background: url('/images/logs.svg') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

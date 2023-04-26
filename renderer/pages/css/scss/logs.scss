@@ -1,0 +1,21 @@
+.logs-container {
+  background: linear-gradient(45deg, #829491, #b7c4c5);
+  width: 800px;
+  height: calc(100vh - 150px);
+  margin: 20px auto;
+  padding: 10px 10px 0 10px;
+  border-radius: 10px;
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    > input {
+      border-radius: 4px;
+      height: 30px;
+      width: 100px;
+      background: #b21515;
+      color: #e8e2e2;
+    }
+  }
+}

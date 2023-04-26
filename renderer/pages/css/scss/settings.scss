@@ -1,0 +1,72 @@
+.settings-modal {
+  .modal-header {
+    height: 100px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px black solid;
+    > input {
+      height: 30px;
+      width: 150px;
+      border-radius: 4px;
+      font-size: 12px;
+      &:nth-child(1) {
+        background: linear-gradient(#64c99d, #69b090);
+      }
+      &:nth-child(2) {
+        background: linear-gradient(#4da2e1, #5a83e8);
+      }
+      &:nth-child(3) {
+        background: linear-gradient(#cdd954, #9a9940);
+      }
+      &:nth-child(4) {
+        background: linear-gradient(#e34f4f, #af3535);
+      }
+      &:nth-child(5) {
+        background: linear-gradient(#b7c4bd, #848a87);
+      }
+    }
+  }
+  .modal-body {
+    height: calc(100% - 100px) !important;
+    .hidden {
+      display: none !important;
+    }
+    .logs-table {
+      height: 100%;
+      width: 400px !important;
+      margin: 0 auto;
+    }
+    .create, .change, .archive {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      > input {
+        height: 30px;
+        border: 0;
+        outline: 0;
+        width: 250px;
+        padding: 10px;
+        border-radius: 6px;
+        &[type=button] {
+          padding: 0;
+          width: 150px;
+          color: #482222;
+          &.create {
+            background: linear-gradient(#4da2e1, #5a83e8);
+          }
+          &.change {
+            background: linear-gradient(#dcd95b, #a9a628);
+          }
+          &.archived {
+            background: linear-gradient(#e74f4f, #a44242);
+          }
+        }
+      }
+    }
+  }
+}
